@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:studentportal/Authentication/student_panel/loginscreen.dart';
 import 'package:studentportal/UI_Helper/Colors.dart';
 
 class custom {
-  static Images({required String img, double? height, double? width}) {
+  static Images({required String img, double? height, double? width,Color? color}) {
     return Image.asset(
       "assets/images/$img.png",
       fit: BoxFit.fill,
       height: height,
       width: width,
+      color: color ?? null,
     );
   }
 
@@ -23,19 +25,22 @@ class custom {
     Widget? icon,
     required bool obscureText,
     VoidCallback? callback,
-    String? error
+    String? error,
+    double? height
 
   }) {
     return Center(
       child: Container(
-        height: 45,
+        height: height ?? 45,
         width: 320,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Colors.grey.shade300,
+          color: Colors.white,
         ),
         child: Form(
+          
           child: TextFormField(
+            style: TextStyle(color: Colors.black,fontFamily: "popin"),
             validator: (value){
               callback;
             },
@@ -49,6 +54,7 @@ class custom {
               child: icon ?? Text("") ),
               focusColor: colors.pirmary,
               focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: colors.secondary),
               ),
               disabledBorder: OutlineInputBorder(

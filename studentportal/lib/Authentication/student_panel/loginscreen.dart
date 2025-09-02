@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:studentportal/Authentication/student_panel/forgetpasseord.dart';
-import 'package:studentportal/Home_Screen/homescreen.dart';
+import 'package:studentportal/Navbar/Navbar.dart';
 import 'package:studentportal/UI_Helper/Button.dart';
 import 'package:studentportal/UI_Helper/Colors.dart';
 import 'package:studentportal/UI_Helper/widget.dart';
@@ -98,7 +98,7 @@ class _LoginscreenState extends State<Loginscreen> {
   gotohome(BuildContext context){
      return Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Homescreen()),
+                MaterialPageRoute(builder: (context) => Navbar()),
               );
   }
 

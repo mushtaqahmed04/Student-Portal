@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:studentportal/Authentication/panel.dart';
+import 'package:studentportal/Authentication/student_panel/loginscreen.dart';
 import 'package:studentportal/UI_Helper/Colors.dart';
 import 'package:studentportal/UI_Helper/widget.dart';
 
@@ -127,7 +128,7 @@ class _PageviewscreenState extends State<Pageviewscreen> {
                           )
                           : Center(
                             child: Icon(
-                              Icons.arrow_forward,
+                              Icons.arrow_forward_ios,
                               color: colors.pirmary,
                             ),
                           ),
